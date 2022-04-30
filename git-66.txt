@@ -1,0 +1,275 @@
+git init
+git config --global user.name "Polarapu Prasad"
+git config --global user.email "devopstraining2015@gmail.com"
+
+git config --list
+
+touch prasad
+ls
+git status
+git add prasad
+git status
+git commit -m "1st commit" prasad
+git status
+git log
+git show cid
+---------------------------
+touch file2 file3 file4 file5
+ls
+git status
+git add file2 file3 file4 file5
+or
+git add .
+or
+git add *
+or
+git add -A
+git status
+git commit -m "label"
+
+
+git reset --soft cid  (local to staging)
+git reset head file-name (staging to workspace)
+git reset --mixed cid  (local to workspace)
+git reset --hard cid (it will delete files and log's)
+
+
+
+git clone https://github.com/swathichowdaryc/Repo1.git
+ls
+cd Repo1
+touch file1
+git status
+git add .
+git status
+git commit -m "test commit" file1
+git status
+git push
+
+----------------------------
+git clone https://github.com/polarapu/batch66.git
+ls
+cd batch66
+touch name
+git add .
+git status
+git commit -m "label"
+git push
+
+git pull --rebase
+git push
+git pull --rebase
+git push
+
+mkdir name-dir
+mkdir prasad-dir
+cd prasad-dir
+touch f1 f2 f3
+cd ..
+git add *
+git commit -m "label"
+git push
+git pull --rebase
+git push
+
+
+====================
+git log's
+-----------
+
+git log
+git log -n
+git log --oneline
+git log --oneline -n
+git log --author=prasad
+git log --author=prasad -n
+git log --author=prasad --oneline
+git log --author=prasad --oneline -n
+
+git log --since=yy-mm-dd
+or
+git log --after="yy-mm-dd"
+
+git log --until=yy-mm-dd
+or
+git log --before="yy-mm-dd"
+
+git log --since=yy-mm-dd --until=yy-mm-dd
+or
+git log --after="yy-mm-dd" --before="yy-mm-dd"
+
+git log --after="yy-mm-dd 00:00" --before="yy-mm-dd 00:00"
+
+git log --grep="label"
+
+git log -- file-name
+
+
+=============================
+touch, cat, vi
+---------------
+
+TOUCH
+-----
+touch file1
+ls
+touch file2 file3 file4
+
+CAT
+---
+cat > file5
+....
+....
+ctrl+d
+
+cat file-name
+
+cat >> file-name
+....
+....
+ctrl+d
+
+
+VI
+---
+vi file6
+---------
+esc i (insert mode)
+.......
+.......
+.......
+
+esc :w!
+esc :q!
+or
+esc :wq!
+
+
+BRANCH
+=======
+git branch
+git branch release-1
+git checkout release-1
+git checkout main
+
+git merge branch-name
+
+git checkout -d branch-name
+
+git checkout -b release-2  **
+
+git push origin branch-name
+or
+git push path/of/c-repo
+
+git checkout -d branch-name  (local )
+
+git push origin -d branch-name  (central repo)
+
+----------------------------------------------------
+
+tag
+----
+git tag
+git tag tag-name
+git show tag-name
+
+git tag t-1.0 cid
+git checkout tag-name
+git log
+ls
+git push origin tag-name
+git push --tags  (all tags)
+git tag -d tag-name
+git push origin -d tag-name
+
+
+
+stash memory
+------------
+
+git stash list
+change some data in x file
+git add .
+git status
+git stash save "lable"
+git stash list
+git stash show stash@{x}
+git stash show -p stash@{x}
+
+POP, APPLY, DROP
+
+POP - cut
+---
+git stash pop
+git stash pop stash@{x}
+
+APPLY - COPY
+-----
+git stash apply
+git stash apply stash@{x}
+
+DROP - delete
+----
+git stash drop
+git stash drop stash@{x} 
+
+
+revert
+-------
+git revert cid
+
+
+amend
+------
+git commit --amend -m "label" 
+
+
+diff b/w merge & rebase
+------------------------
+git rebase branch-name
+git pull --rebase
+
+
+alias
+------
+git status
+git config --global alias.s "status"
+git s
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git log
+git config --global alias.l "log"
+git l
+
+git log --oneline
+git config --global alias.l1 "log --oneline"
+git l1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
