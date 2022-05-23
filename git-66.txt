@@ -250,6 +250,7 @@ git config --global alias.l1 "log --oneline"
 git l1
 
 
+example for jenkins
 
 
 
